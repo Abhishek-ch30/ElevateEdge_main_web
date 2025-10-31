@@ -2,7 +2,7 @@ export const expCards = [
   {
     title: "Design & Development",
     date: "",
-    imgPath: "/src/components/components/download.png", // Replace with your actual path
+imgPath: "/public/download.png", // Updated path to match deployment structure
     responsibilities: [
       "Custom website and mobile app tailored to your brand and goals.",
       "Responsive, mobile-friendly design with seamless UX.",
@@ -13,7 +13,7 @@ export const expCards = [
   {
     title: "Hosting & Maintenance",
     date: "",
-    imgPath: "/src/components/components/download2.png", // Replace with your actual path
+imgPath: "/public/download2.png", // Updated path to match deployment structure
     responsibilities: [
       "Fast and secure hosting setup (e.g., Vercel, Netlify, DigitalOcean).",
       "Domain registration and DNS configuration.",
@@ -24,7 +24,7 @@ export const expCards = [
   {
     title: "SEO & Digital Marketing",
     date: "",
-    imgPath: "/src/components/components/download3.png", // Replace with your actual path
+imgPath: "/public/download3.png", // Updated path to match deployment structure
     responsibilities: [
       "On-page SEO (meta tags, speed, mobile optimization).",
       "Keyword research and content optimization.",
