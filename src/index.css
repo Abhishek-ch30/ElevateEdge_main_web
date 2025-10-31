@@ -1,0 +1,146 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    min-height: 100vh;
+    /* Futuristic digital background with layered gradients and planet dots */
+    background-color: #0b0c18;
+    background-image:
+      /* Large faint magenta/blue glow top left */
+      radial-gradient(ellipse 40% 30% at 22% 10%, rgba(93,18,210,0.22) 0%, rgba(21,18,43,0.13) 80%, transparent 100%),
+      /* Teal/mauve blur, right middle */
+      radial-gradient(ellipse 38% 32% at 78% 30%, rgba(18,248,210,0.11) 0%, transparent 90%),
+      /* Faint blue bulge bottom right */
+      radial-gradient(ellipse 28% 20% at 80% 88%, rgba(48,136,244,0.13) 0%, transparent 100%),
+      /* Purple-gold main glow center */
+      radial-gradient(ellipse 65% 51% at 48% 51%, rgba(129,46,209,0.16) 0%, rgba(204,187,240,0.10) 48%, transparent 100%),
+      /* Central white/purple glow */
+      radial-gradient(ellipse 38% 24% at 48% 38%, rgba(205,191,250,0.08) 0%, transparent 68%),
+      /* Tiny magenta "planet" */
+      radial-gradient(circle 2.8px at 73% 16%, #e972ffcc 85%, transparent 100%),
+      /* Tiny blue "planet" */
+      radial-gradient(circle 2.1px at 31% 82%, #55e0f4cc 82%, transparent 100%),
+      /* Tiny orange "planet" */
+      radial-gradient(circle 1.6px at 91% 77%, #feb859cc 81%, transparent 100%),
+      /* Very tiny white "stars" */
+      radial-gradient(circle 1.2px at 12% 56%, #fff7fb99 85%, transparent 100%),
+      radial-gradient(circle 1.1px at 58% 11%, #faedfe88 85%, transparent 100%),
+      radial-gradient(circle 1.0px at 15% 90%, #eafafc77 85%, transparent 100%),
+      /* Wide faint purple "aura" edges */
+      radial-gradient(ellipse 100% 60% at 50% 93%, rgba(120,54,170,0.03) 0%, transparent 95%),
+      radial-gradient(ellipse 85% 50% at 50% 0%, rgba(107,45,184,0.03) 0%, transparent 80%)
+    ;
+    background-repeat: no-repeat;
+    background-size: cover, cover, cover, cover, cover,
+      2.8px 2.8px, 2.1px 2.1px, 1.6px 1.6px, 1.2px 1.2px, 1.1px 1.1px, 1.0px 1.0px,
+      cover, cover;
+    background-position: left top, right 22% top 20%, right 14% bottom 7%, center 56%, center 36%,
+      73% 16%, 31% 82%, 91% 77%, 12% 56%, 58% 11%, 15% 90%,
+      center bottom, center top;
+  }
+}
+
+@layer components {
+  .glassmorphic {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-xl;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .neumorphic-btn {
+    @apply px-8 py-4 rounded-xl font-medium transition-all duration-300;
+    background: linear-gradient(135deg, #9333ea, #0891b2);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .neumorphic-btn:hover {
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.4), -12px -12px 24px rgba(255, 255, 255, 0.15), 0 0 30px rgba(147, 51, 234, 0.6);
+    transform: translateY(-2px);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(147, 51, 234, 0.8);
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
